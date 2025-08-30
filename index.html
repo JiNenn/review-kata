@@ -1,11 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta
+      name="description"
+      content="review-kata: 小さな差分でレビュー筋を鍛える React + TS の練習用アプリ"
+    />
     <title>review-kata</title>
+
+    <!-- 任意（用意できるなら）：アイコンとマニフェスト -->
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon.png" sizes="32x32" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <!-- NOTE: 厳しめのCSPは本番のHTTPヘッダで。Vite開発サーバではHMRが壊れやすい -->
   </head>
+
   <body>
-    <div id="root"></div>
+    <noscript>
+      このアプリは JavaScript を必要とします。ブラウザ設定で有効にしてください。
+    </noscript>
+
+    <!-- 初期表示のチラつきを抑える簡易スプラッシュ（任意） -->
+    <div id="root">
+      <div
+        style="
+          font: 16px/1.4 system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+          padding: 24px; color: #555;
+        "
+      >
+        Loading…
+      </div>
+    </div>
+
+    <!-- Vite のエントリ。ルート直下の index.html から /src/main.tsx を読み込む -->
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
